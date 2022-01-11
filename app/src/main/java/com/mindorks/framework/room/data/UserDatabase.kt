@@ -22,7 +22,9 @@ abstract class UserDatabase: RoomDatabase() {
                     context.applicationContext,
                     UserDatabase::class.java,
                     "user_database"
-                )
+                ).build()
+                INSTANCE = instance
+                return instance
             }
         }
     }
